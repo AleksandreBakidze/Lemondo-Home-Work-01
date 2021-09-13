@@ -1,8 +1,8 @@
 package com.example.lemondohomework01
 
-import android.accounts.AccountManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.lemondohomework01.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,12 +12,15 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val am: AccountManager = AccountManager.get(this)
-        val options = Bundle()
+        val bundle : Bundle? = intent.extras
+        val brandName = bundle!!.getString("brandName")
+//        val mainImage = bundle!!.getString("mainImage")
+//        val brandImage = bundle!!.getString("brandImage")
+//        val orderRate = bundle!!.getString("orderRate")
 
-//        am.getAuthToken(
-//
-//        )
+//        //binding..text = Editable.Factory.getInstance().newEditable(position)
+//        binding.
+        //Toast.makeText(this, "$brandName", Toast.LENGTH_LONG).show()
 
     }
 }
